@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.nehal.superappdemo",
+    "sha256_cert_fingerprints":
+    ["7B:E6:BC:A1:8B:FB:52:F7:13:FB:16:87:1F:DC:62:50:33:BC:16:01:ED:3B:E4:F5:65:4D:33:E9:0D:65:DF:59"]
+  }
+}]
