@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { fetchWeather } from "./api/fetchWeather";
+import appboxo from "@appboxo/js-sdk";
 import "./App.css";
 
 const App = () => {
@@ -8,6 +9,11 @@ const App = () => {
   const [weather, setWeather] = useState({});
 
   const search = async (e) => {
+    // Sends init event to host client
+    appboxo.send("AppBoxoWebAppInit");
+
+    // Subscribes to event, sent by host client
+    appboxo.subscribe((e) => console.log(e));
     if (e.key === "Enter") {
       const data = await fetchWeather(query);
 
